@@ -5,11 +5,11 @@ create table tbl_user (
     username varchar(50) not null,
     user_pass varchar(100) not null,
     email varchar(50) not null unique key,
-    fullname varchar(100),
-    customer_address varchar(255),
-    customer_phone int(10) unique key,
-    customer_email varchar(50) unique key,
-    customer_message text,
+    full_name varchar(100),
+--     customer_address varchar(255),
+--     customer_phone int(10) unique key,
+--     customer_email varchar(50) unique key,
+--     customer_message text,
     is_accessible int default 1
 );
 
@@ -34,17 +34,17 @@ create table tbl_product(
     foreign key(cate_id) references tbl_category(cate_id)
 );
     
-create table tbl_order (
-	ord_id int(11) primary key auto_increment,
-    customer_id int(11) not null,
-    prd_id int(11),
-    ord_amount int(5) not null,
-    ord_buy_date DATETIME not null,
-    ord_total_price DECIMAL(8,0) not null,
-    ord_status varchar(50) not null,
-    foreign key(prd_id) references tbl_product(prd_id),
-	foreign key(customer_id) references tbl_user(user_id)
-);
+-- create table tbl_order (
+-- 	ord_id int(11) primary key auto_increment,
+--     customer_id int(11) not null,
+--     prd_id int(11),
+--     ord_amount int(5) not null,
+--     ord_buy_date DATETIME not null,
+--     ord_total_price DECIMAL(8,0) not null,
+--     ord_status varchar(50) not null,
+--     foreign key(prd_id) references tbl_product(prd_id),
+-- 	foreign key(customer_id) references tbl_user(user_id)
+-- );
 
 insert into tbl_category(cate_name)
 values

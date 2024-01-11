@@ -12,7 +12,7 @@ $result = mysqli_query($conn,$sql);
             <th scope="col">User ID</th>
             <th scope="col">Username</th>
             <th scope="col">Email</th>
-            <th scope="col">Message</th>
+            <th scope="col">Privilege</th>
             <th scope="col">Status</th>
 
         </tr>
@@ -24,7 +24,8 @@ $result = mysqli_query($conn,$sql);
                 <th scope="row"><?php echo $row['user_id']?></th>
                 <td><?php echo $row['username']?></td>
                 <td><?php echo $row['email']?></td>
-                <td><?php echo $row['customer_message']?></td>
+                <td>Administrator</td>
+
 <?php if ($row['is_accessible'] == 1) { ?>
                 <td class="table-success">Allowed</td>
 <?php }else{?>

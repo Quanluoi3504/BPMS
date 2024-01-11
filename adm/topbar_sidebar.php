@@ -48,7 +48,7 @@
         <div class="topbar">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="logo_section">
-                    <a href="../index.php"><img class="img-responsive" src="images/logoo.png" alt="#" /></a>
+                    <a href="../account.php"><img class="img-responsive" src="images/logoo.png" alt="#" /></a>
                 </div>
             </nav>
         </div>

@@ -39,7 +39,7 @@ include_once ('master/database.php');
                                 $_SESSION['username'] = $username;
                                 $_SESSION['email'] = $email;
                                 echo '<script>alert("Logged in successfully")</script>';
-                                header("Location:index.php");
+                                header("Location:adm/dashboard.php");
                             }
                         }else {
                             if(!filter_var($email,FILTER_VALIDATE_EMAIL) || !preg_match('/@gmail\.com$/', $email)) {

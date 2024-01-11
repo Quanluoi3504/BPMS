@@ -215,11 +215,11 @@ span {
 #sidebar {
     min-width: 280px;
     max-width: 280px;
-    background-color: #15283c;
-    color: #fff;
+    background-color: #CAFBF8;
+    color: darkorange;
     transition: all 0.3s;
     position: relative;
-    z-index: 11;
+    z-index: 1;
     box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.4);
     float: left;
     width: 100%;
@@ -432,7 +432,10 @@ span {
 }
 
 
+img.img-responsive {
+    margin-left: 50px;
 
+}
 
 
 

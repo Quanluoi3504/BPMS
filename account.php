@@ -17,7 +17,7 @@ if ($_SESSION['username'] == '') {
             <p><strong>Email:<?php echo $_SESSION['email'];?></strong> </p>
 
         </div>
-        <form id="logoutForm" method="post" action="user.php">
+        <form id="logoutForm" method="get" action="login.php">
             <button type="submit" name="logout">Logout</button>
         </form>
     </div>
@@ -28,7 +28,7 @@ if ($_SESSION['username'] == '') {
 
 <?php
 }
-if (isset($_POST['logout'])) {
+if (isset($_GET['logout'])) {
     session_destroy();
     header("Location: login.php");
     exit();

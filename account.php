@@ -17,7 +17,7 @@ if ($_SESSION['username'] == '') {
             <p><strong>Email:<?php echo $_SESSION['email'];?></strong> </p>
 
         </div>
-        <form id="logoutForm" method="get" action="login.php">
+        <form id="logoutForm" method="get" action="account.php">
             <button type="submit" name="logout">Logout</button>
         </form>
     </div>

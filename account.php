@@ -18,11 +18,15 @@ if ($_SESSION['username'] == '') {
         </div>
         <br>
         <form action="adm/dashboard.php" method="get">
-            <button type="submit" class="btn btn-primary">Admin Page>> </button>
+            <button type="submit" class="btn btn-success">Admin Page>> </button>
+        </form>
+        <br>
+        <form action="change_pass.php" method="get">
+            <button type="submit" class="btn btn-primary">Reset Password</button>
         </form>
         <br>
         <form id="logoutForm" method="get" action="account.php">
-            <button type="submit" name='logout' class="btn btn-outline-primary">Logout</button>
+            <button type="submit" name='logout' class="btn btn-outline-danger">Logout</button>
         </form>
     </div>
 <?php

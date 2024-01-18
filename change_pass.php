@@ -40,7 +40,7 @@ include_once ('master/database.php');
                                     $update_new_pass = "update tbl_user set user_pass = '$new_hashed_password' where email = '$email'";
                                     $updated_new_pass = mysqli_query($conn,$update_new_pass);
                                     echo '<script>alert("Password changed successfully")</script>';
-                                    header("Location:login.php");
+                                    header("Location:index.php");
                                 }
                             }
                         }
@@ -61,21 +61,26 @@ include_once ('master/database.php');
                 </div>
                 <br>
                 <div class="row">
-                    <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">Password: </label>
+                    <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">New pass: </label>
                     <div class="col-lg-8">
-                        <input type="password" name="new_password" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Enter your password">
+                        <input type="password" name="new_password" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Enter your new password">
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">Retype Pass: </label>
                     <div class="col-lg-8">
-                        <input type="password" name="password_retyped" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Retype your password">
+                        <input type="password" name="password_retyped" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Retype your new password">
                     </div>
                 </div>
                 <br>
                 <button type="submit" class="btn btn-outline-primary col-12">Reset</button>
             </form>
+            <br>
+            <div class="row">
+                <a href="signup.php" class="text-info col-6">Signup?</a>
+                <a href="login.php" class="text-info col-6">Login?</a>
+            </div>
         </div>
     </div>
 <?php $conn->close();?>

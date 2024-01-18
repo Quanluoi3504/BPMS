@@ -28,7 +28,7 @@ create table tbl_product(
     prd_color varchar(255) not null,
     prd_title varchar(255) not null,
     prd_material varchar(255) not null,
-    prd_weight int not null,
+    prd_weight varchar(255) not null,
     prd_size varchar(255) not null,
     is_displayed int default 1,
     foreign key(cate_id) references tbl_category(cate_id)

@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="sidebar_blog_2">
-                <h4>L K</h4>
+                <h4>L K Q</h4>
                 <ul class="list-unstyled components">
                     <li><a href="dashboard.php"> <span>Dashboard</span></a></li>
                     <li><a href="product_manage.php"><span>Products Management</span></a></li>
@@ -44,7 +44,7 @@
         <div class="topbar">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="logo_section">
-                    <a href="../index.php"><img class="img-responsive" src="images/logoo.png" alt="#" /></a>
+                    <a href="../account.php"><img class="img-responsive" src="images/logoo.png" alt="#" /></a>
                 </div>
             </nav>
         </div>

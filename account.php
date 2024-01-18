@@ -15,17 +15,16 @@ if ($_SESSION['username'] == '') {
             <hr>
             <p><strong>Username:<?php echo $_SESSION['username'];?></strong> </p>
             <p><strong>Email:<?php echo $_SESSION['email'];?></strong> </p>
-
         </div>
+        <br>
+        <form action="adm/dashboard.php" method="get">
+            <button type="submit" class="btn btn-primary">Admin Page>> </button>
+        </form>
+        <br>
         <form id="logoutForm" method="get" action="account.php">
-            <button type="submit" name="logout">Logout</button>
+            <button type="submit" name='logout' class="btn btn-outline-primary">Logout</button>
         </form>
     </div>
-
-
-
-
-
 <?php
 }
 if (isset($_GET['logout'])) {

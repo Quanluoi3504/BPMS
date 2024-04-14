@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +32,9 @@
                         <div class="user_info">
                             <h6>Admin</h6>
                             <p><span class="online_animation"></span> Online</p>
+                            <form id="logoutForm" method="get" action="<?php $_SERVER['PHP_SELF']?>">
+                                <button type="submit" name='logout' class="btn btn-outline-danger">Logout</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -36,7 +45,6 @@
                     <li><a href="dashboard.php"> <span>Dashboard</span></a></li>
                     <li><a href="product_manage.php"><span>Products Management</span></a></li>
                     <li><a href="user_manage.php"> <span>Users Management</span></a></li>
-
                 </ul>
             </div>
         </nav>
@@ -48,3 +56,14 @@
                 </div>
             </nav>
         </div>
+
+<?php
+if (isset($_GET['logout'])) {
+//            $_SESSION['username'] = null;
+//            $_SESSION['email'] = null;
+    session_destroy();
+    header("Location: /login.php");
+    exit();
+}
+
+?>
